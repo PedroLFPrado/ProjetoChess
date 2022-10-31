@@ -9,11 +9,11 @@ namespace textChess
 {
     class Program
     {
-        static void main(string[] args)
+        static void Main(string[] args)
         {
-            Position p = new Position(3, 4);   
-
-
+            Position p = new Position(3, 4);
+            Tabuleiro tab = new Tabuleiro(8, 8);
+            Tela.imprimirTabuleiro(tab);
         }
     }
 }
