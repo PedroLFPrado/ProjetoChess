@@ -12,11 +12,18 @@ namespace textChess
     {
         static void Main(string[] args)
         {
-            Position p = new Position(3, 4);
-            Tabuleiro tab = new Tabuleiro(8, 8);
+            try{
+                Position p = new Position(3, 4);
+                Tabuleiro tab = new Tabuleiro(8, 8);
 
-            tab.colocarPeca(new Rook(tab, Cor.Preta), new Position(0, 0));
-            Tela.imprimirTabuleiro(tab);
+                tab.colocarPeca(new Rook(tab, Cor.Preta), new Position(0, 1));
+                tab.colocarPeca(new King(tab, Cor.Preta), new Position(1, 0));
+                Tela.imprimirTabuleiro(tab);
+            }
+            catch(TabuleiroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
