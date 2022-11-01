@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using chessgame;
 
 namespace chessboard
 {
@@ -16,9 +17,9 @@ namespace chessboard
 
         public Tabuleiro tab { get; protected set; }
 
-        public Peca(Position position, Cor cor, Tabuleiro tab)
+        public Peca( Tabuleiro tab, Cor cor)
         {
-            this.position = position;
+            this.position = null;
             this.cor = cor;
             this.tab = tab;
             this.qntMovimentos = 0;
